@@ -9,6 +9,10 @@ function QuestionItem({ question }) {
     </option>
   ));
 
+  const handleCorrectAnswerChange = (event) => {
+    const newCorrectIndex = parseInt(event.target.value);
+    onCorrectAnswer(id, newCorrectIndex);
+  };
   return (
     <li>
       <h4>Question {id}</h4>
